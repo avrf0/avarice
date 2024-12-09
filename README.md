@@ -4,14 +4,17 @@ GDB debug server for AVR microcontrollers
 ## Changes from official repo
 - Added support for following devices:
     - ATmega324PB
-    - ATmega3208, ATmega4808, ATmega4809
+    - ATmega808, ATmega809, ATmega1608, ATmega1609, ATmega3208, ATmega3209, ATmega4808, ATmega4809
     - ATmega16a4u
-    - ATtiny402, ATtiny412, ATtiny814, ATtiny3217
+    - ATtiny202, ATtiny204, ATtiny402, ATtiny404, ATtiny406, ATtiny804, ATtiny806, ATtiny807
+    - ATtiny212, ATtiny214, ATtiny412, ATtiny414, ATtiny416, ATtiny417, ATtiny814, ATtiny816, ATtiny817, ATtiny1614, ATtiny1616, ATtiny1617, ATtiny3216, ATtiny3217
+    - ATtiny424, ATtiny426, ATtiny427, ATtiny824, ATtiny826, ATtiny827, ATtiny1624, ATtiny1626, ATtiny1627, ATtiny3224, ATtiny3226, ATtiny3227
 - Added support for UPDI. This is very similar to PDI but:
 	- communication is done over one bidirectional wire
 	- initialization sequence is different, needs a separate device descriptor type
 	- different access requirements for some memory regions (e.g. flash cannot be read byte by byte)
 - Updated device descriptor generator to Python3 syntax
+	- modified to take the part name as the first parameter so there's less need for manual editing
 
 ## Supporting new stuff
 This is a rough guide since it only documents changes already performed. So far new devices and debugger protocols are still fairly compatibile with existing ones, but this will most likely not always be the case. It is not intendend to be an extensive porting guide.
