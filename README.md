@@ -21,7 +21,7 @@ This is a rough guide since it only documents changes already performed. So far 
 
 ### New devices
 1. Run ./scripts/io_gen.py with the device header from the Atmel DFP.
-	(eg. python3 ./scripts/io_gen.py $(DFP_FOLDER)/include/avr/iom4808.h)
+	(eg. python3 ./scripts/io_gen.py atmega4808 $(DFP_FOLDER)/include/avr/iom4808.h)
 2. Put the script output in ./src/ioreg.cc and the variable name in ./src/ioreg.h.
 3. Add the device in ./src/devdescr.cc and fill with info based on datasheet and .atdf file in Atmel DFP.
 4. Other changes might be needed. Example for ATmega4808:

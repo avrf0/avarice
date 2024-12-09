@@ -24,22 +24,22 @@ md5sums=('SKIP')
 validpgpkeys=()
 
 prepare() {
-	cd "${srcdir}/${pkgname}-${pkgver}-${pkgrel}"
+	cd "${srcdir}/${pkgname}"
 }
 
 build() {
-	cd "${srcdir}/${pkgname}-${pkgver}-${pkgrel}"
+	cd "${srcdir}/${pkgname}"
 	./Bootstrap
 	./configure
 	make all
 }
 
 check() {
-	cd "${srcdir}/${pkgname}-${pkgver}-${pkgrel}"
+	cd "${srcdir}/${pkgname}"
 	make -k check
 }
 
 package() {
-	cd "${srcdir}/${pkgname}-${pkgver}-${pkgrel}"
+	cd "${srcdir}/${pkgname}"
 	make DESTDIR="$pkgdir/" install
 }
